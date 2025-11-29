@@ -43,31 +43,63 @@ body{
     margin: 10px;
     animation: borderAnimate 5s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    transition: all 0.3s linear;
+    text-shadow: 0 0 0px white;
+}
+
+.box:hover{
+    animation-play-state: running;
+    border-width: 5px;
 }
 
 .box img { 
     width: 100%;
 }
 .box1{
-    /* box-shadow: 0 0 60px rgb(255, 242, 0); */
+    box-shadow: 0 0 0px rgba(255, 242, 0, 0.600);
     background: 
     linear-gradient(black) padding-box,
     conic-gradient(from var(--rotate),black,black,black,rgb(255, 255, 0),black) border-box;
-    border: 5px solid rgba(255, 242, 0, 0);
+    border: 0px solid rgba(255, 242, 0, 0);
+}
+.box1:hover{
+    box-shadow: 0 0 60px rgba(255, 242, 0, 0.600);
+    color: rgb(255, 255, 0);
+    text-shadow: 0 0 10px rgb(255, 255, 0);
 }
 
 .box2{
-    /* box-shadow: 0 0 60px rgb(0, 136, 255); */
+    box-shadow: 0 0 0px rgb(0, 136, 255);
     background: 
     linear-gradient(black) padding-box,
     conic-gradient(from var(--rotate),black,black,black,rgb(0, 136, 255),black) border-box;
-    border: 5px solid rgba(255, 242, 0, 0);
+    border: 0px solid rgba(255, 242, 0, 0);
+}
+.box2:hover{
+    box-shadow: 0 0 60px rgba(2, 221, 255, 0.889);
+    color: aqua;
+    text-shadow: 0 0 10px aqua;
 }
 
 .box3{
-    /* box-shadow: 0 0 60px rgb(255, 136, 0); */
+    box-shadow: 0 0 0px rgb(255, 136, 0);
     background: 
     linear-gradient(black) padding-box,
     conic-gradient(from var(--rotate),black,black,black,rgb(255, 136, 0),black) border-box;
-    border: 5px solid rgba(255, 242, 0, 0);
+    border: 0px solid rgba(255, 242, 0, 0);
+}
+.box3:hover{
+    box-shadow: 0 0 60px rgba(255, 191, 0, 0.6);
+    color: rgb(255, 136, 0);
+    text-shadow: 0 0 10px rgb(255, 136, 0);
+}
+
+body:has(.box:hover) .box{
+    transform: scale(0.8);
+}
+
+.box:hover{
+    transform: scale(1.1) !important;
 }
