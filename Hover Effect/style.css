@@ -1,0 +1,53 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    anchor-name: --some-anchor;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.box:hover{
+    anchor-name: --some-anchor;
+}
+.red{
+    background-color: #0782f6;
+    
+}
+.blue{
+    background-color: #ff1111;
+    
+}
+.green{
+    background-color: #02ff0f;
+}
+
+.anchor{
+    background-color: rgb(255, 254, 254);
+    border-radius: 10px;
+    position: absolute;
+    top:anchor(top);
+    left:anchor(left);
+    bottom:anchor(bottom);
+    right:anchor(right);
+    pointer-events: none;  /* mouse us element se Interact nhi karenga  */
+    position-anchor: --some-anchor;
+    transition: all 0.3s ease-in; /*transition smooth hoga */
+    mix-blend-mode: exclusion;
+}
